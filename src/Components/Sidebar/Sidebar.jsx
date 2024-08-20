@@ -9,11 +9,11 @@ const Sidebar = () => {
     <div className="sidebar">
       <div className="top">
         {/*implement functionality to extend/collapse the sidebar by onClickevent listener & menu icon*/}
-        <img onClick={() => setExtended(prev=>!prev)} className="menu" src={assets.menu_icon} alt="" />
+        <img onClick={() => setExtended(prev=>!prev)} className="menu" src={assets.menu_icon} alt="" /> {/*set on the sidebar parent div and trickles down to its children*/}
         <div className="new-chat">
           <img src={assets.plus_icon} alt="" />
-          {extended ? <p>New Chat</p> : null}{" "}
           {/*ternary operator to show/hide contents based on state*/}
+          {extended ? <p>New Chat</p> : null}
         </div>
         <br />
         {/*ternary operator to show/hide contents based on state*/}
@@ -30,16 +30,19 @@ const Sidebar = () => {
       <div className="bottom">
         <div className="bottom-item recent-entry">
           <img src={assets.question_icon} alt="" />
+          {/*ternary operator to show/hide contents based on state*/}
           {extended ? <p>Help</p> : null}
         </div>
         <br />
         <div className="bottom-item recent-entry">
           <img src={assets.history_icon} alt="" />
+          {/*ternary operator to show/hide contents based on state*/}
           {extended ? <p>Activity</p> : null}
         </div>
         <br />
         <div className="bottom-item recent-entry">
           <img src={assets.setting_icon} alt="" />
+          {/*ternary operator to show/hide contents based on state*/}
           {extended ? <p>Settings</p> : null}
         </div>
       </div>
